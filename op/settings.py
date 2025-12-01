@@ -139,7 +139,9 @@ CORS_ALLOWED_ORIGINS = [
     "https://10.0.0.5:8080",
     "http://localhost:8000",    
     "http://127.0.0.1:8000",
-    "http://localhost:5173"
+    "http://localhost:5173",
+    "http://51.210.109.123:10011",
+    "http://beirouk.dev"
 ]
 
 CORS_ALLOW_CREDENTIALS = True
