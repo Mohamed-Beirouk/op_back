@@ -133,33 +133,25 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-CORS_ALLOWED_ORIGINS = [
-    "http://192.168.1.100",
-    "http://127.0.0.1:3000",
-    "https://10.0.0.5:8080",
-    "http://localhost:8000",    
-    "http://127.0.0.1:8000",
-    "http://localhost:5173",
-    "http://51.210.109.123:10011",
-    "http://beirouk.dev"
-]
+CORS_ALLOW_ALL_ORIGINS = True
 
+# Optional: allow credentials
 CORS_ALLOW_CREDENTIALS = True
+
+# Optional: allow all HTTP methods
 CORS_ALLOW_METHODS = [
+    "DELETE",
     "GET",
+    "OPTIONS",
+    "PATCH",
     "POST",
     "PUT",
-    "PATCH",
-    "DELETE",
-    "OPTIONS",
 ]
 
+# Optional: allow all headers
 CORS_ALLOW_HEADERS = [
-    "content-type",
-    "authorization",
-    "x-csrftoken",
+    "*",
 ]
-
 import os
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
